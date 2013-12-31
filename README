@@ -1,0 +1,28 @@
+Global setup:
+ Download and install Git
+  git config --global user.name "Your Name"
+  git config --global user.email michaelthecsguy@gmail.com
+        
+Next steps:
+  mkdir dotVimVundle
+  cd dotVimVundle
+  git init
+  touch README
+  git add README
+  git commit -m 'first commit'
+  git remote add origin git@github.com:michaelthecsguy/dotVimVundle.git
+  git push -u origin master
+      
+Existing Git Repo?
+  cd existing_git_repo
+  git remote add origin git@github.com:michaelthecsguy/dotVimVundle.git
+  git push -u origin master
+
+Installation for NEW Environment:
+
+  git clone git://github.com/michaelthecsguy/dotVimVundle.git ~/.vim
+
+Create Symlinks:
+
+  ln -s ~/.vim/vimrc ~/.vimrc
+  ln -s ~/.vim/gvimrc ~/.gvimrc
