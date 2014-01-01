@@ -2,7 +2,7 @@
 set nocompatible
 filetype off
 
-"*****For Vundle*****
+"**************************For Vundle****************************
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
@@ -26,14 +26,15 @@ Bundle 'git://github.com/tpope/vim-vividchalk.git'
 Bundle 'git://github.com/tsaleh/vim-align.git'
 Bundle 'git://github.com/tsaleh/vim-shoulda.git'
 Bundle 'git://github.com/tsaleh/vim-supertab.git'
-Bundle 'git://github.com/tsaleh/vim-tcomment.git'
+"Substitute tcomment for commenting out a block of code 'git://github.com/tsaleh/vim-tcomment.git'
+Bundle 'git://github.com/tomtom/tcomment_vim.git'
 Bundle 'git://github.com/vim-ruby/vim-ruby.git'
 Bundle 'git://github.com/nelstrom/vim-blackboard.git'
 Bundle 'git://github.com/chrismetcalf/vim-taglist.git'
 
 "It's required for Vundles
 filetype plugin indent on
-"********************
+"****************************************************************
 
 
 "*****For Pathogen -- Plug-ins mgmt tool with update_bundles*****
