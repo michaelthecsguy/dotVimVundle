@@ -1,10 +1,46 @@
 "This must be first, because it changes other options as a side effect
 set nocompatible
-
-"For Pathogen -- Plug-ins mgmt tool with update_bundles
 filetype off
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+
+"*****For Vundle*****
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+"Let Vundle manage bundles and plugins
+Bundle 'gmarik/vundle'
+"My bundles and plugins
+Bundle 'git://github.com/astashov/vim-ruby-debugger.git'
+Bundle 'git://github.com/msanders/snipmate.vim.git'
+Bundle 'git://github.com/scrooloose/nerdtree.git'
+Bundle 'git://github.com/scrooloose/nerdcommenter.git'
+Bundle 'git://github.com/timcharper/textile.vim.git'
+Bundle 'git://github.com/tpope/vim-cucumber.git'
+Bundle 'git://github.com/tpope/vim-fugitive.git'
+Bundle 'git://github.com/tpope/vim-git.git'
+Bundle 'git://github.com/tpope/vim-haml.git'
+Bundle 'git://github.com/tpope/vim-markdown.git'
+Bundle 'git://github.com/tpope/vim-rails.git'
+Bundle 'git://github.com/tpope/vim-repeat.git'
+Bundle 'git://github.com/tpope/vim-surround.git'
+Bundle 'git://github.com/tpope/vim-vividchalk.git'
+Bundle 'git://github.com/tsaleh/vim-align.git'
+Bundle 'git://github.com/tsaleh/vim-shoulda.git'
+Bundle 'git://github.com/tsaleh/vim-supertab.git'
+Bundle 'git://github.com/tsaleh/vim-tcomment.git'
+Bundle 'git://github.com/vim-ruby/vim-ruby.git'
+Bundle 'git://github.com/nelstrom/vim-blackboard.git'
+Bundle 'git://github.com/chrismetcalf/vim-taglist.git'
+
+"It's required for Vundles
+filetype plugin indent on
+"********************
+
+
+"*****For Pathogen -- Plug-ins mgmt tool with update_bundles*****
+"filetype off
+"call pathogen#runtime_append_all_bundles()
+"call pathogen#helptags()
+"****************************************************************
 
 " Basic Configuration after initial VIM installation
 
