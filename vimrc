@@ -3,36 +3,37 @@ set nocompatible
 filetype off
 
 "**************************For Vundle****************************
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 "Let Vundle manage bundles and plugins
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 "My bundles and plugins
-Bundle 'git://github.com/astashov/vim-ruby-debugger.git'
-Bundle 'git://github.com/msanders/snipmate.vim.git'
-Bundle 'git://github.com/scrooloose/nerdtree.git'
-Bundle 'git://github.com/scrooloose/nerdcommenter.git'
-Bundle 'git://github.com/timcharper/textile.vim.git'
-Bundle 'git://github.com/tpope/vim-cucumber.git'
-Bundle 'git://github.com/tpope/vim-fugitive.git'
-Bundle 'git://github.com/tpope/vim-git.git'
-Bundle 'git://github.com/tpope/vim-haml.git'
-Bundle 'git://github.com/tpope/vim-markdown.git'
-Bundle 'git://github.com/tpope/vim-rails.git'
-Bundle 'git://github.com/tpope/vim-repeat.git'
-Bundle 'git://github.com/tpope/vim-surround.git'
-Bundle 'git://github.com/tpope/vim-vividchalk.git'
-Bundle 'git://github.com/tsaleh/vim-align.git'
-Bundle 'git://github.com/tsaleh/vim-shoulda.git'
-Bundle 'git://github.com/tsaleh/vim-supertab.git'
+Plugin 'git://github.com/astashov/vim-ruby-debugger.git'
+Plugin 'git://github.com/msanders/snipmate.vim.git'
+Plugin 'git://github.com/scrooloose/nerdtree.git'
+Plugin 'git://github.com/scrooloose/nerdcommenter.git'
+Plugin 'git://github.com/timcharper/textile.vim.git'
+Plugin 'git://github.com/tpope/vim-cucumber.git'
+Plugin 'git://github.com/tpope/vim-fugitive.git'
+Plugin 'git://github.com/tpope/vim-git.git'
+Plugin 'git://github.com/tpope/vim-haml.git'
+Plugin 'git://github.com/tpope/vim-markdown.git'
+Plugin 'git://github.com/tpope/vim-rails.git'
+Plugin 'git://github.com/tpope/vim-repeat.git'
+Plugin 'git://github.com/tpope/vim-surround.git'
+Plugin 'git://github.com/tpope/vim-vividchalk.git'
+Plugin 'git://github.com/tsaleh/vim-align.git'
+Plugin 'git://github.com/tsaleh/vim-shoulda.git'
+Plugin 'git://github.com/tsaleh/vim-supertab.git'
 "Substitute tcomment for commenting out a block of code 'git://github.com/tsaleh/vim-tcomment.git'
-Bundle 'git://github.com/tomtom/tcomment_vim.git'
-Bundle 'git://github.com/vim-ruby/vim-ruby.git'
-Bundle 'git://github.com/nelstrom/vim-blackboard.git'
-Bundle 'git://github.com/chrismetcalf/vim-taglist.git'
+Plugin 'git://github.com/tomtom/tcomment_vim.git'
+Plugin 'git://github.com/vim-ruby/vim-ruby.git'
+Plugin 'git://github.com/nelstrom/vim-blackboard.git'
+Plugin 'git://github.com/chrismetcalf/vim-taglist.git'
 
 "It's required for Vundles
+call vundle#end()
 filetype plugin indent on
 "****************************************************************
 
@@ -44,11 +45,14 @@ filetype plugin indent on
 "****************************************************************
 
 " Basic Configuration after initial VIM installation
-
-colorscheme blackboard
+if has("gui_macvim")
+  colorscheme blackboard
+else
+  highlight Normal ctermfg=grey ctermbg=black
+endif
 
 "store lots of :cmdline history
-set history=1000000
+set history=10000
 
 "to prevents vi from making its annoying beeps when a command doesn't work
 "Instead, it briefly flashes the screen
