@@ -20,7 +20,7 @@ Existing Git Repo?
 
 Installation for NEW Environment:
 
-  1. git clone git://github.com/michaelthecsguy/dotVimVundle.git ~/.vim
+  1. git clone https://github.com/michaelthecsguy/dotVimVundle.git ~/.vim
   2. then install vim and macvim through homebrew if they are not in OS
   3. either to launch vim and run :PluginInstall
   or
