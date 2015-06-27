@@ -36,5 +36,6 @@ References:
   http://c7.se/switching-to-vundle/
   http://rmitc.org/2013/04/modern-vim-plugin-management-pathogen-vs-vundle
   https://github.com/gmarik/Vundle.vim
+  http://erikzaadi.com/2012/03/19/auto-installing-vundle-from-your-vimrc/
   http://stackoverflow.com/questions/4161022/git-how-to-track-untracked-content
   http://web.mit.edu/jhawk/mnt/spo/git/git-doc/user-manual.html
