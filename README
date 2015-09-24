@@ -22,7 +22,9 @@ Installation for NEW Environment:
 
   1. git clone https://github.com/michaelthecsguy/dotVimVundle.git ~/.vim
   2. then install vim and macvim through homebrew if they are not in OS
-  3. either to launch vim and run :PluginInstall
+  3. make sure you symlink rc files
+  4. make sure go to gmarik Vundle site to see the newest update and re git clone Vundle to .vim 
+  5. either to launch vim and run :PluginInstall
   or
   from the command line: vim +PluginInstall +qall
 
