@@ -23,7 +23,47 @@ Installation for NEW Environment:
   1. git clone https://github.com/michaelthecsguy/dotVimVundle.git ~/.vim
   2. then install vim and macvim through homebrew if they are not in OS
   3. make sure you symlink rc files
-  4. make sure go to gmarik Vundle site to see the newest update and re git clone Vundle to .vim folder 
+  4. try to launch VIM or MacVIM through CLI initially if there is error during VIM initialization, 
+  4.1. nano into vimrc to make sure vundle installation location is same as its function loading location
+  4.2. the remove .vim/bundle/vundle and .vim/bundle/Vundle.vim
+  4.3. repeat step 4 if error still persists , then,
+  4.4. delete the .vim folder to have fresh installation from the ground and make sure go to gmarik's Vundle/VundleVim's Vundle.vim github site to see the newest update and re git clone Vundle to .vim folder
+  4.5. then add the following to .vimrc
+  ```
+" Setting up Vundle - the vim plugin bundler
+    let iCanHazVundle=1
+    let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
+    if !filereadable(vundle_readme) 
+      echo "Installing Vundle.."
+      echo ""
+      silent !mkdir -p ~/.vim/bundle
+      silent !git clone https://github.com/VundleVim/Vundle.vim ~/.vim/bundle/vundle
+      let iCanHazVundle=0
+    endif
+    set nocompatible              " be iMproved, required
+    filetype off                  " required
+    set rtp+=~/.vim/bundle/vundle/
+    call vundle#begin()
+    Plugin 'VundleVim/Vundle.vim'
+    "Add your bundles here
+    Plugin 'Syntastic' "uber awesome syntax and errors highlighter
+    Plugin 'https://github.com/tpope/vim-fugitive' "So awesome, it should be illegal 
+    "...All your other bundles...
+    if iCanHazVundle == 0
+      echo "Installing Vundles, please ignore key map error messages"
+    echo ""
+    :PluginInstall
+    endif
+
+    call vundle#end() 
+    "must be last
+    filetype plugin indent on " load filetype plugins/indent settings
+    syntax on                      " enable syntax
+                                                                                                                                                         
+" Setting up Vundle - the vim plugin bundler end
+
+  ```
+
   5. either to launch vim and run :PluginInstall
   or
   from the command line: vim +PluginInstall +qall
@@ -37,8 +77,9 @@ Create Symlinks:
 References:
   http://c7.se/switching-to-vundle/
   http://rmitc.org/2013/04/modern-vim-plugin-management-pathogen-vs-vundle
-  https://github.com/gmarik/Vundle.vim
-  http://erikzaadi.com/2012/03/19/auto-installing-vundle-from-your-vimrc/
+ * https://github.com/gmarik/Vundle.vim
+ * https://github.com/VundleVim/Vundle.vim
+ * http://erikzaadi.com/2012/03/19/auto-installing-vundle-from-your-vimrc/
   http://stackoverflow.com/questions/4161022/git-how-to-track-untracked-content
   http://web.mit.edu/jhawk/mnt/spo/git/git-doc/user-manual.html
   https://help.github.com/articles/generating-ssh-keys/

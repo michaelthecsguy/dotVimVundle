@@ -10,15 +10,15 @@ if !filereadable(vundle_readme)
   echo "Installing Vundle.."
   echo ""
   silent !mkdir -p ~/.vim/bundle
-  silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
+  silent !git clone https://github.com/VundleVim/Vundle.vim ~/.vim/bundle/vundle
   let iCanHazVundle=0
 endif
 
-set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/.vim/bundle/vundle
 call vundle#begin()
 
 "Let Vundle manage bundles and plugins
-Plugin 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 "My bundles and plugins
 Plugin 'git://github.com/astashov/vim-ruby-debugger.git'
 Plugin 'git://github.com/msanders/snipmate.vim.git'
